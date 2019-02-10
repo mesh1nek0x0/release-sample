@@ -1,7 +1,5 @@
 {
   "preReleaseId": null,
-  "pkgFiles": ["package.json"],
-  "use": "git.tag",
   "git": {
     "requireCleanWorkingDir": true,
     "requireUpstream": true,
