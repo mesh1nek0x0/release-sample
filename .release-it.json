@@ -11,6 +11,9 @@
     "push": true,
     "pushRepo": "origin"
   },
+  "github": {
+    "release": true,
+  },
   "npm": {
     "publish": false
   }
