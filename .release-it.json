@@ -13,6 +13,7 @@
   },
   "github": {
     "release": true,
+    "releaseName": "Release v${version}",
     "proxy": null
   },
   "npm": {
