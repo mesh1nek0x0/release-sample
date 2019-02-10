@@ -1,0 +1,9 @@
+{
+  "name": "release-sample",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "release": "release-it -c .release-it.json"
+  }
+}
