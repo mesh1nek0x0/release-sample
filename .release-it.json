@@ -1,0 +1,23 @@
+{
+  "preReleaseId": null,
+  "pkgFiles": ["package.json"],
+  "use": "git.tag",
+  "git": {
+    "requireCleanWorkingDir": true,
+    "requireUpstream": true,
+    "addUntrackedFiles": false,
+    "commit": true,
+    "commitMessage": ":package: Release v${version}",
+    "commitArgs": "",
+    "tag": true,
+    "tagName": "v${version}",
+    "tagAnnotation": "Release ${version}",
+    "tagArgs": "",
+    "push": true,
+    "pushArgs": "",
+    "pushRepo": "origin"
+  },
+  "npm": {
+    "publish": false
+  }
+}
