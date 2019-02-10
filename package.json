@@ -7,6 +7,10 @@
     "release": "release-it",
     "auto-release:patch": "release-it patch -n",
     "auto-release:minor": "release-it minor -n",
-    "auto-release:major": "release-it major -n"
+    "auto-release:major": "release-it major -n",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
   }
 }
