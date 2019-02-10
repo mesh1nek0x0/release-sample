@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "release": "release-it"
+    "release": "release-it",
+    "auto-release:patch": "release-it patch -n",
+    "auto-release:minor": "release-it minor -n",
+    "auto-release:major": "release-it major -n"
   }
 }
