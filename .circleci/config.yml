@@ -37,36 +37,7 @@ jobs:
       - attach_workspace:
           at: .
       - run: yarn test
-      
-  patch_release:
-    docker:
-      - image: circleci/node:8.10
-    working_directory: ~/workspace
-    steps:
-      - checkout
-      - run: yarn install
-      - run: *setup_gitconfig
-      - run: yarn auto-release:patch
 
-  minor_release:
-    docker:
-      - image: circleci/node:8.10
-    working_directory: ~/workspace
-    steps:
-      - checkout
-      - run: yarn install
-      - run: *setup_gitconfig
-      - run: yarn auto-release:minor
-
-  major_release:
-    docker:
-      - image: circleci/node:8.10
-    working_directory: ~/workspace
-    steps:
-      - checkout
-      - run: yarn install
-      - run: *setup_gitconfig
-      - run: yarn auto-release:major
   release:
     docker:
       - image: circleci/node:8.10
