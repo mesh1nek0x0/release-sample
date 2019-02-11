@@ -1,3 +1,11 @@
+references:
+  commands:
+    setup_gitconfig: &setup_gitconfig
+      name: Setup gitconfig
+      command: |
+        git config user.email "10177370+mesh1nek0x0@users.noreply.github.com"
+        git config user.name "mesh1nek0x0"
+
 version: 2
 jobs:
   build:
@@ -36,18 +44,29 @@ jobs:
     working_directory: ~/workspace
     steps:
       - checkout
-      - restore_cache:
-          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-
       - run: yarn install
-
-      - save_cache:
-          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/workspace/node_modules
-      - run: git config user.email "10177370+mesh1nek0x0@users.noreply.github.com"
-      - run: git config user.name "mesh1nek0x0"
+      - run: *setup_gitconfig
       - run: yarn auto-release:patch
+
+  minor_release:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - run: yarn install
+      - run: *setup_gitconfig
+      - run: yarn auto-release:minor
+
+  major_release:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - run: yarn install
+      - run: *setup_gitconfig
+      - run: yarn auto-release:major
 
 workflows:
   version: 2
