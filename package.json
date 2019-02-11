@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "release-it": "^10.1.0"
   }
 }

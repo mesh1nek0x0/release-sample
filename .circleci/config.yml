@@ -29,6 +29,23 @@ jobs:
       - attach_workspace:
           at: .
       - run: yarn test
+      
+  patch_release:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - restore_cache:
+          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+      - run: yarn install
+
+      - save_cache:
+          key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/workspace/node_modules
+      - run: yarn auto-release:patch
 
 workflows:
   version: 2
