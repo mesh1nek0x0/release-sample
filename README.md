@@ -1,6 +1,6 @@
-# CircleCi release-it Job sample
+# release-it sample
 
-CircleCi release-it Job sample
+release-it Job sample
 
 ## :pushpin: Description
 
@@ -11,7 +11,7 @@ CircleCi release-it Job sample
 
 ## :white_check_mark: Features
 <!-- list up your product features. -->
-- kick job api, bump up your app version
+- bump up your app version
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "preReleaseId": null,
   "git": {
-    "requireCleanWorkingDir": true,
+    "requireCleanWorkingDir": false,
     "requireUpstream": true,
     "addUntrackedFiles": false,
     "commitMessage": ":package: Release v${version}",
