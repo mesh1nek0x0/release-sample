@@ -45,6 +45,8 @@ jobs:
           key: yarn-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/workspace/node_modules
+      - run: git config user.email "10177370+mesh1nek0x0@users.noreply.github.com"
+      - run: git config user.name "mesh1nek0x0"
       - run: yarn auto-release:patch
 
 workflows:
