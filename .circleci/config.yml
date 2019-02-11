@@ -67,6 +67,15 @@ jobs:
       - run: yarn install
       - run: *setup_gitconfig
       - run: yarn auto-release:major
+  release:
+    docker:
+      - image: circleci/node:8.10
+    working_directory: ~/workspace
+    steps:
+      - checkout
+      - run: yarn install
+      - run: *setup_gitconfig
+      - run: yarn auto-release:${RELEASE_VERSION}
 
 workflows:
   version: 2
