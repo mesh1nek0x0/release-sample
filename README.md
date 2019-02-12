@@ -1,4 +1,4 @@
-# release-it sample
+# release-it job sample
 
 release-it Job sample
 
@@ -11,12 +11,19 @@ release-it Job sample
 
 ## :white_check_mark: Features
 <!-- list up your product features. -->
-- bump up your app version
+- bump up your app version triggered with API
+```
+## ${TYPE} expected patch/minor/major
+$ curl -u ${CIRCLE_API_USER_TOKEN}: -d build_parameters[CIRCLE_JOB]=release -d build_parameters[RELEASE_VERSION]=${TYPE} https://circleci.com/api/v1.1/project/github/mesh1nek0x0/release-sample/tree/master
+```
+- there are 3 jobs(build/test/release)
+- build & test workflow will be started when you push repository
 
 ---
 
 ## :information_source: Anything else
-Nothing
+- need github user key at circleci project setting
+- need personal token to call CircleCI Job
 
 ## :pencil: Author
 [mesh1nek0x0](https://github.com/mesh1neko)
