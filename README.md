@@ -6,8 +6,12 @@ release-it in CircleCI Job sample
 
 ### DEMO
 
-![](./sample.png)
+![](./demo.gif)
 <!-- add gif image if you like -->
+
+
+release-it in CircleCI
+![](./demo.png)
 
 ## :white_check_mark: Features
 <!-- list up your product features. -->
