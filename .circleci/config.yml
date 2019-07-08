@@ -56,3 +56,10 @@ workflows:
       - test:
           requires: # buildが成功したら実行する
             - build
+  release_app:
+    jobs:
+      - release:
+          filters:
+            branches:
+              only:
+                - master

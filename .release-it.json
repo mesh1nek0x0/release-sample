@@ -4,7 +4,7 @@
     "requireCleanWorkingDir": false,
     "requireUpstream": true,
     "addUntrackedFiles": false,
-    "commitMessage": ":package: Release v${version}",
+    "commitMessage": "[ci-skip] :package: Release v${version}",
     "tag": true,
     "tagName": "v${version}",
     "tagAnnotation": "Release ${version}",
