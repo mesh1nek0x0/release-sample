@@ -57,19 +57,25 @@ jobs:
           name: "echo tag"
           command: echo $CIRCLE_TAG
 
-deployment:
-  job-upload_app:
-    tag: /v[0-9]+(\.[0-9]+)*/
-
 workflows:
   version: 2
   ## masterマージ時に実行する
   build_and_test:
     jobs:
-      - job-build
+      - job-build:
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
       - job-test:
           requires: # buildが成功したら実行する
             - job-build
+          filters:
+            branches:
+              only: /.*/
+            tags:
+              only: /.*/
       - job-upload_app:
           requires: # testが成功したら実行する
             - job-test
