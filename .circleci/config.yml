@@ -67,6 +67,10 @@ workflows:
           requires: # buildが成功したら実行する
             - job-build
       - job-upload_app:
+          requires: # testが成功したら実行する
+            - job-test
           filters:
+            branches:
+              ignore: /.*/
             tags:
               only: /^v[0-9]+(\.[0-9]+)*$/
