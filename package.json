@@ -1,6 +1,6 @@
 {
   "name": "release-sample",
-  "version": "2.1.18",
+  "version": "2.1.19",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
