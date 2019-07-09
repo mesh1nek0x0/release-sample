@@ -76,7 +76,7 @@ workflows:
   release_build:
     triggers:
       - schedule:
-          cron: "56 * * * *"
+          cron: "59 * * * *"
           filters:
             branches:
               only: 
