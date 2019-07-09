@@ -67,9 +67,6 @@ workflows:
           requires: # buildが成功したら実行する
             - job-build
       - job-upload_app:
-          requires: # tagがある場合、およびtestが成功したら実行する
-            - job-test
           filters:
             tags:
-              only: /^v[0-9](\.[0-9]){2}$/
-
+              only: /^v[0-9]+(\.[0-9]+)*$/
