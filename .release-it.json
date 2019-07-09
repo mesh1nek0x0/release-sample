@@ -4,7 +4,7 @@
     "requireCleanWorkingDir": false,
     "requireUpstream": true,
     "addUntrackedFiles": false,
-    "commitMessage": ":package: Release v${version}",
+    "commitMessage": ":package: ci auto release v${version}",
     "tag": true,
     "tagName": "v${version}",
     "tagAnnotation": "Release ${version}",
