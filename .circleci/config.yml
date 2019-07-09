@@ -58,7 +58,7 @@ jobs:
           command: echo $CIRCLE_TAG
 
 deployment:
-  release:
+  job-upload_app:
     tag: /v[0-9]+(\.[0-9]+)*/
 
 workflows:
